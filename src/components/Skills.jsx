@@ -7,7 +7,6 @@ import Firebase from "../assets/images/firebase.png";
 import Git from "../assets/images/git.png";
 import Java from "../assets/images/java.png";
 import Mysql from "../assets/images/mysql.png";
-import "../stylesheets/animation.css";
 import SkillsSetIcons from "./SkillsSetIcons";
 
 const Skills = () => {

@@ -1,5 +1,3 @@
-import "../stylesheets/animation.css";
-
 const IconButtonProject = ({ svg, link }) => {
   return (
     <a
