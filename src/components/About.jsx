@@ -1,4 +1,3 @@
-import "../stylesheets/animation.css";
 import Imagen from "../assets/images/devices.png";
 import IconButton from "./IconButton";
 import IconGithub from "./icons/IconGithub";
@@ -32,7 +31,7 @@ const About = () => {
             <span className="text-[#6c8097]">Rodríguez</span> <br />
             <span className="text-[#4f6378]">Pérez</span>
           </h1>
-          <h1 className="animation text-black dark:text-white transition-all duration-500 text-xl md:text-2xl font-mono uppercase">
+          <h1 className="animate-typingInfinite w-[20ch] whitespace-nowrap overflow-hidden border-r-2 text-black dark:text-white transition-all duration-500 text-xl md:text-2xl font-mono uppercase">
             Front-End Developer
           </h1>
           <p className="text-black dark:text-white transition-all duration-500">

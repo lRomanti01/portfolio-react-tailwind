@@ -17,7 +17,8 @@ export default {
       },
       animation:{
         'typing' : 'typing .5s forwards',
-        'typingOut' : 'typingOut .5s forwards'
+        'typingOut' : 'typingOut 1s forwards',
+        'typingInfinite' : 'typing 4s infinite steps(20)'
       }
     },
   },

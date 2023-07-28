@@ -34,7 +34,7 @@ const IconButton = ({ svg, link, title }) => {
       }
       <p
         ref={titleB}
-        className="md:animate-typingOut w-[11ch] whitespace-nowrap overflow-hidden ml-3 border-b-2 border-[#6c8097] font-bold uppercase"
+        className="md:animate-typingOut w-[11ch] md:w-[0ch] whitespace-nowrap overflow-hidden ml-3 border-b-2 border-[#6c8097] font-bold uppercase"
       >
         {title}
       </p>
