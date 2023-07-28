@@ -1,4 +1,4 @@
-import React from "../assets/images/React.png";
+import ReactIcon from "../assets/images/react.png";
 import "../stylesheets/animation.css";
 import ProjectTemplate from "./ProjectTemplate";
 import TodoApp from "../assets/images/todoApp.png";
@@ -19,7 +19,7 @@ const Projects = () => {
         <ProjectTemplate
           image={TodoApp}
           projectName="ToDo APP"
-          techIcons={React}
+          techIcons={ReactIcon}
           button1={
             <IconButtonProject
               link={
