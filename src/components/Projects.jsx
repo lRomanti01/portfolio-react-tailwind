@@ -1,5 +1,4 @@
 import ReactIcon from "../assets/images/react.png";
-import "../stylesheets/animation.css";
 import ProjectTemplate from "./ProjectTemplate";
 import TodoApp from "../assets/images/todoApp.png";
 import IconGithub from "./icons/IconGithub";
