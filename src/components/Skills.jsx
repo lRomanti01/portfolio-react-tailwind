@@ -1,7 +1,7 @@
 import Html from "../assets/images/html.png";
 import Css from "../assets/images/css.png";
 import Js from "../assets/images/js.png";
-import React from "../assets/images/React.png";
+import ReactIcon from "../assets/images/react.png";
 import Tailwind from "../assets/images/tailwind.png";
 import Firebase from "../assets/images/firebase.png";
 import Git from "../assets/images/git.png";
@@ -36,12 +36,12 @@ const Skills = () => {
         <SkillsSetIcons
           title="REACT"
           alt="REACT"
-          image={React}
+          image={ReactIcon}
           borderColor="#61dbfb"
         />
         <SkillsSetIcons
           title="TAILWIND"
-          alt="TAILWIND"
+          alt="TAILWIND"gi
           image={Tailwind}
           borderColor="#1caaba"
         />
