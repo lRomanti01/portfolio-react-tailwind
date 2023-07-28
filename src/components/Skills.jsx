@@ -41,7 +41,7 @@ const Skills = () => {
         />
         <SkillsSetIcons
           title="TAILWIND"
-          alt="TAILWIND"gi
+          alt="TAILWIND"
           image={Tailwind}
           borderColor="#1caaba"
         />
