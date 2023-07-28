@@ -6,7 +6,7 @@ import IconGithub from "./icons/IconGithub";
 import IconDemo from "./icons/IconDemo";
 import IconButtonProject from "./IconButtonProject";
 
-const Proyects = () => {
+const Projects = () => {
   return (
     <section
       id="projects"
