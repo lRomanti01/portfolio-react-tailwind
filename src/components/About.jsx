@@ -1,11 +1,11 @@
-import Imagen from "../assets/images/devices.png";
+import Imagen from "../assets/images/devices2.png";
 import IconButton from "./IconButton";
 import IconGithub from "./icons/IconGithub";
 import IconEmail from "./icons/IconEmail";
 import IconVC from "./icons/IconVC";
 import IconLinkedin from "./icons/IconLinkedin";
 import IconInstagram from "./icons/IconInstagram";
-import CV from "../assets/downloads/Romantiezer - CV.pdf"
+import CV from "../assets/downloads/Romantiezer - CV.pdf";
 import { useRef } from "react";
 
 const About = () => {
@@ -98,7 +98,9 @@ const About = () => {
             hover:shadow-gray-500 dark:hover:shadow-white hover:scale-105 hover:bg-[#4f6378] dark:hover:bg-[#6c8097]"
           >
             <IconVC fill="white" />
-            <a className="font-bold" href={CV} download>Download CV</a>
+            <a className="font-bold" href={CV} download>
+              Download CV
+            </a>
           </button>
         </div>
       </div>
