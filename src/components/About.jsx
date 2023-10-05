@@ -1,4 +1,4 @@
-import Imagen from "../assets/images/devices2.png";
+import Imagen from "../assets/images/devices.webp";
 import IconButton from "./IconButton";
 import IconGithub from "./icons/IconGithub";
 import IconEmail from "./icons/IconEmail";
@@ -62,7 +62,7 @@ const About = () => {
               }
             />
             <IconButton
-              link={"https://www.instagram.com/itnamor_white/"}
+              link={"https://www.instagram.com/romantiezerz/"}
               title="Instagram"
               svg={
                 <IconInstagram className="fill-[#32475b] dark:fill-[#6c8097] rounded-full transition-all duration-100 hover:scale-110" />
