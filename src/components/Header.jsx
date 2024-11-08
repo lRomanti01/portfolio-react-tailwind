@@ -1,15 +1,17 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useContext } from "react";
 import HeaderButtons from "./HeaderButtons";
 import IconMenu from "./icons/IconMenu";
 import IconMoon from "./icons/IconMoon";
 import IconSun from "./icons/IconSun";
 import Icon from "./icons/Icon";
+import { LanguageContext } from "../context/LanguageProvider";
 
 const inialStateDarkMode = localStorage.getItem("theme") === "dark";
 
 const Header = ({ mainRef, footerRef }) => {
   const [darkMode, setDarkMode] = useState(inialStateDarkMode);
   const [activeButton, setActiveButton] = useState(null);
+  const { language, changeLanguage } = useContext(LanguageContext);
 
   //Ref that add an blur when opened the menu
 
@@ -30,29 +32,6 @@ const Header = ({ mainRef, footerRef }) => {
       localStorage.setItem("theme", "light");
     }
   }, [darkMode]);
-
-  //Function that activate the header buttons when gets to the section
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll("section");
-      const scrollPosition = window.scrollY + 200;
-
-      sections.forEach((section) => {
-        const top = section.offsetTop;
-        const bottom = top + section.offsetHeight;
-
-        if (scrollPosition >= top && scrollPosition <= bottom) {
-          setActiveButton(section.id);
-        }
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   useEffect(() => {
     function handleResize() {
@@ -84,14 +63,30 @@ const Header = ({ mainRef, footerRef }) => {
     menuIcon.current.classList.add("blur-sm");
   };
 
-  const handleClickClose = () => {
+  const handleClickClose = (button) => {
     menu.current.classList.add("hidden");
     mainRef.current.classList.remove("blur-sm");
     footerRef.current.classList.remove("blur-sm");
     title.current.classList.remove("blur-sm");
     darkModeIcon.current.classList.remove("blur-sm");
     menuIcon.current.classList.remove("blur-sm");
+    setActiveButton(button);
   };
+
+  const HeaderButtonsList = [
+    {
+      title: "About",
+      href: "#about",
+    },
+    {
+      title: "Skills",
+      href: "#skills",
+    },
+    {
+      title: "Projects",
+      href: "#projects",
+    },
+  ];
 
   return (
     <header
@@ -103,8 +98,10 @@ const Header = ({ mainRef, footerRef }) => {
         href="#about"
         className="text-black dark:text-white transition-all duration-500 px-2 py-5 font-bold text-xl uppercase cursor-pointer hover:text-gray-500 dark:hover:text-gray-300 flex items-center fill-gray-500 hover:fill-gray-400 dark:hover:fill-gray-300 dark:fill-white"
       >
-       <Icon className="mr-3"/> <span className="hidden md:block">Portfolio</span>
+        <Icon className="mr-3" />{" "}
+        <span className="hidden md:block">Portfolio</span>
       </a>
+
       <div className="flex items-center">
         <div
           ref={menu}
@@ -116,41 +113,23 @@ const Header = ({ mainRef, footerRef }) => {
           >
             X
           </div>
-          <HeaderButtons
-            onClick={handleClickClose}
-            title="About"
-            href="#about"
-            className={`text-black md:mr-5 mb-6 p-1 cursor-pointer transition-all duration-75 font-bold hover:text-gray-500 dark:hover:text-[#86b6e9] dark:md:hover:text-gray-300 md:mb-0  md:font-normal
+          {HeaderButtonsList.map((item, index) => (
+            <HeaderButtons
+              key={index}
+              onClick={() => handleClickClose(item.href)}
+              title={item.title}
+              href={item.href}
+              className={`text-black md:mr-5 mb-6 p-1 cursor-pointer transition-all duration-75 font-bold hover:text-gray-500 dark:hover:text-[#86b6e9] dark:md:hover:text-gray-300 md:mb-0  md:font-normal
       dark:text-white ${
-        activeButton === "about"
+        activeButton === item.href
           ? "md:border-b-2 border-gray-700 dark:border-white"
           : ""
       }`}
-          />
-          <HeaderButtons
-            onClick={handleClickClose}
-            title="Skills"
-            href="#skills"
-            className={`text-black md:mr-5 mb-6 p-1 cursor-pointer transition-all duration-75 font-bold hover:text-gray-500 dark:hover:text-[#86b6e9] dark:md:hover:text-gray-300 md:mb-0  md:font-normal
-            dark:text-white ${
-              activeButton === "skills"
-                ? "md:border-b-2 border-gray-700 dark:border-white"
-                : ""
-            }`}
-          />
-          <HeaderButtons
-            onClick={handleClickClose}
-            title="Projects"
-            href="#projects"
-            className={`text-black md:mr-5 mb-6 p-1 cursor-pointer transition-all duration-75 font-bold hover:text-gray-500 dark:hover:text-[#86b6e9] dark:md:hover:text-gray-300 md:mb-0  md:font-normal
-      dark:text-white ${
-        activeButton === "projects"
-          ? "md:border-b-2 border-gray-700 dark:border-white"
-          : ""
-      }`}
-          />
+            />
+          ))}
           <hr className="border-1 md:border-0" />
         </div>
+
         <button
           ref={darkModeIcon}
           className="p-5 transition-all duration-500"
@@ -162,6 +141,19 @@ const Header = ({ mainRef, footerRef }) => {
             <IconMoon className="fill-gray-500 hover:fill-gray-400" />
           )}
         </button>
+
+        <button
+          ref={darkModeIcon}
+          className="p-5 transition-all duration-500"
+          onClick={() => changeLanguage(language == "es" ? "en" : "es")}
+        >
+          {language == "es" ? (
+            <img src="https://flagsapi.com/ES/flat/64.png" />
+          ) : (
+            <img src="https://flagsapi.com/GB/flat/64.png" />
+          )}
+        </button>
+
         <div
           ref={menuIcon}
           className="block md:hidden transition-all duration-500"

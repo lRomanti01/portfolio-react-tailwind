@@ -11,7 +11,7 @@ const SkillsSetIcons = ({ title, image, alt, borderColor }) => {
     skillTitle.current.classList.remove("animate-typingOut");
     skillTitle.current.classList.add("animate-typing");
     skillTitle.current.classList.remove("w-[0ch]");
-    skillTitle.current.classList.add("w-[11ch]");
+    skillTitle.current.classList.add("w-[12ch]");
   };
 
   const handleOut = () => {
@@ -19,7 +19,7 @@ const SkillsSetIcons = ({ title, image, alt, borderColor }) => {
     skillIcon.current.classList.add("rotate-0");
     skillTitle.current.classList.remove("sanimate-typing");
     skillTitle.current.classList.add("animate-typingOut");
-    skillTitle.current.classList.remove("w-[11ch]");
+    skillTitle.current.classList.remove("w-[12ch]");
     skillTitle.current.classList.add("w-[0ch]");
   };
 
@@ -38,7 +38,7 @@ const SkillsSetIcons = ({ title, image, alt, borderColor }) => {
           src={image}
           alt={alt}
           ref={skillIcon}
-          className="h-20 xl:h-24 2xl:h-28 transition-all duration-50000 mx-auto"
+          className="h-20 xl:h-24 2xl:h-28 transition-all duration-50000 mx-auto p-1"
         />
       </div>
       </div>

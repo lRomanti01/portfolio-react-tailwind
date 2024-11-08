@@ -32,7 +32,7 @@ const About = () => {
             <span className="text-[#4f6378]">Pérez</span>
           </h1>
           <h1 className="animate-typingInfinite w-[20ch] whitespace-nowrap overflow-hidden border-r-2 text-black dark:text-white transition-all duration-500 text-xl md:text-2xl font-mono uppercase">
-            Front-End Developer
+            Full-Stack Developer
           </h1>
           <p className="text-black dark:text-white transition-all duration-500">
             Development of web sites and applications
