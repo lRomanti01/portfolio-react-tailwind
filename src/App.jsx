@@ -32,7 +32,6 @@ const App = () => {
       >
         <p>
           Copyright &copy; {currentYear} Romantiezer Rodríguez Pérez{" "}
-          {t("welcome")}
         </p>
       </footer>
     </div>
