@@ -19,12 +19,43 @@ const About = () => {
     point.current.classList.remove("animate-pulse");
   };
 
+  const socialMediaButtons = [
+    {
+      link: "https://github.com/lRomanti01",
+      title: "github",
+      icon: (
+        <IconGithub className="mb-3 fill-[#32475b] dark:fill-[#6c8097] rounded-full transition-all duration-100 hover:scale-110" />
+      ),
+    },
+    {
+      link: "mailto:romanti159@gmail.com?Subject=Message%20from%20portfolio",
+      title: "Email",
+      icon: (
+        <IconEmail className="mb-3 fill-[#32475b] dark:fill-[#6c8097] rounded-full transition-all duration-100 hover:scale-110" />
+      ),
+    },
+    {
+      link: "https://www.linkedin.com/in/romantiezer-rodriguez/",
+      title: "Linked In",
+      icon: (
+        <IconLinkedin className="mb-3 fill-[#32475b] dark:fill-[#6c8097] rounded-full transition-all duration-100 hover:scale-110" />
+      ),
+    },
+    {
+      link: "https://www.instagram.com/romantiezerz/",
+      title: "Instagram",
+      icon: (
+        <IconInstagram className="mb-3 fill-[#32475b] dark:fill-[#6c8097] rounded-full transition-all duration-100 hover:scale-110" />
+      ),
+    },
+  ];
+
   return (
     <section
       id="about"
       className="flex md:min-h-screen scroll-mt-16 justify-center"
     >
-      <div className="flex flex-col md:flex-row">
+    <div className="flex flex-col md:flex-row">
         <div className="px-20 pt-20 md:mr-0 xl:mr-10 2xl:mr-32">
           <h1 className="text-black dark:text-white transition-all duration-500 mb-3 text-4xl font-medium lg:text-5xl xl:text-6xl">
             Romantiezer <br />
@@ -38,36 +69,14 @@ const About = () => {
             Development of web sites and applications
           </p>
           <div className="mt-5">
-            <IconButton
-              link={"https://github.com/lRomanti01"}
-              title="github"
-              svg={
-                <IconGithub className="mb-3 fill-[#32475b] dark:fill-[#6c8097] rounded-full transition-all duration-100 hover:scale-110" />
-              }
-            />
-            <IconButton
-              link={
-                "mailto:romanti159@gmail.com?Subject=Message%20from%20portfolio"
-              }
-              title="Email"
-              svg={
-                <IconEmail className="mb-3 fill-[#32475b] dark:fill-[#6c8097] rounded-full transition-all duration-100 hover:scale-110" />
-              }
-            />
-            <IconButton
-              link={"https://www.linkedin.com/in/romantiezer-rodriguez/"}
-              title="Linked In"
-              svg={
-                <IconLinkedin className="mb-3 fill-[#32475b] dark:fill-[#6c8097] rounded-full transition-all duration-100 hover:scale-110" />
-              }
-            />
-            <IconButton
-              link={"https://www.instagram.com/romantiezerz/"}
-              title="Instagram"
-              svg={
-                <IconInstagram className="fill-[#32475b] dark:fill-[#6c8097] rounded-full transition-all duration-100 hover:scale-110" />
-              }
-            />
+            {socialMediaButtons.map((item) => (<IconButton
+              link={item.link}
+              title={item.title}
+              svg=
+                {item.icon}
+
+            />))}
+   
           </div>
           <div
             onMouseOver={handleOver}
