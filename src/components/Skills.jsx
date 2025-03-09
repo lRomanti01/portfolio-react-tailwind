@@ -1,73 +1,54 @@
-import Html from "../assets/images/html.png";
-import Css from "../assets/images/css.png";
-import Js from "../assets/images/js.png";
-import ReactIcon from "../assets/images/react.png";
-import Tailwind from "../assets/images/tailwind.png";
-import Firebase from "../assets/images/firebase.png";
-import Git from "../assets/images/git.png";
-import Java from "../assets/images/java.png";
-import Mysql from "../assets/images/mysql.png";
 import SkillsSetIcons from "./SkillsSetIcons";
+import skillsData from "../data/SkillsData";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+import { useTranslation } from "react-i18next";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Skills = () => {
+  const { t } = useTranslation();
+  const main = useRef();
+
+  useGSAP(
+    () => {
+      const boxes = gsap.utils.toArray(".box");
+      boxes.forEach((box) => {
+        gsap.fromTo(
+          box,
+          { x: "-100vw", opacity: 0 }, // Comienza fuera de pantalla e invisible
+          {
+            x: 0, // Se centra
+            opacity: 1, // Se hace visible
+            ease: "power3.out", // Movimiento más natural
+            scrollTrigger: {
+              trigger: box,
+              start: "top 90%", // Inicia cuando el box está en el 80% de la pantalla
+              end: "top 60%", // Termina cuando está más cerca del centro
+              scrub: true,
+              // markers: true, // Activa para ver los puntos de inicio/fin
+            },
+          }
+        );
+      });
+    },
+    { scope: main }
+  );
+
   return (
     <section
       id="skills"
       className="scroll-mt-32 text-black dark:text-white flex flex-col items-center mt-5 mb-5 xl:min-h-screen"
     >
       <h1 className="uppercase font-bold text-2xl md:text-4xl mb-10">
-        Skills set
+       {t("skillSet")}
       </h1>
-      <div className="grid grid-cols-3 gap-5 md:gap-14 xl:gap-y-32">
-        <SkillsSetIcons
-          title="HTML"
-          alt="HTML"
-          image={Html}
-          borderColor="#e44d26"
-        />
-        <SkillsSetIcons
-          title="CSS"
-          alt="CSS"
-          image={Css}
-          borderColor="#1b73ba"
-        />
-        <SkillsSetIcons title="JS" alt="JS" image={Js} borderColor="#d6bf01" />
-        <SkillsSetIcons
-          title="REACT"
-          alt="REACT"
-          image={ReactIcon}
-          borderColor="#61dbfb"
-        />
-        <SkillsSetIcons
-          title="TAILWIND"
-          alt="TAILWIND"
-          image={Tailwind}
-          borderColor="#1caaba"
-        />
-        <SkillsSetIcons
-          title="FIREBASE"
-          alt="FIREBASE"
-          image={Firebase}
-          borderColor="#f5820b"
-        />
-        <SkillsSetIcons
-          title="GIT"
-          alt="GIT"
-          image={Git}
-          borderColor="#de4c36"
-        />
-        <SkillsSetIcons
-          title="JAVA"
-          alt="JAVA"
-          image={Java}
-          borderColor="#1564c0"
-        />
-        <SkillsSetIcons
-          title="MYSQL"
-          alt="MYSQL"
-          image={Mysql}
-          borderColor="#f7941e"
-        />
+      <div ref={main} className="grid grid-cols-3 gap-5 md:gap-14 xl:gap-y-32">
+        {skillsData.map((item, index) => (
+          <SkillsSetIcons key={index} {...item} />
+        ))}
       </div>
     </section>
   );
