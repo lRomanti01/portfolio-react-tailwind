@@ -3,5 +3,11 @@
   "fullstack": "Desarrollador Full-stack",
   "description": "Desarrollo de sitios web y aplicaciones",
   "aboutMeTitle": "Acerca de mi",
-  "aboutMeDescription": "Me apasiona la programación web y la resolución de problemas. Mi pasión me ha permitido ser autodidacta y adaptarme a cualquier situación."
+  "aboutMeDescription": "Me apasiona la programación web y la resolución de problemas. Mi pasión me ha permitido ser autodidacta y adaptarme a cualquier situación.",
+  "portfolio": "Portafolio",
+  "about": "Sobre mi",
+  "skills": "Habilidades",
+  "projects": "Proyectos",
+  "downloadCV": "Descargar CV",
+  "skillSet": "Habilidades"
 }

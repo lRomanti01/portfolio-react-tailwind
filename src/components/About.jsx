@@ -2,14 +2,13 @@ import Imagen from "../assets/images/devices.webp";
 import IconButton from "./IconButton";
 import IconGithub from "./icons/IconGithub";
 import IconEmail from "./icons/IconEmail";
-import IconVC from "./icons/IconVC";
 import IconLinkedin from "./icons/IconLinkedin";
 import IconInstagram from "./icons/IconInstagram";
-import CV from "../assets/downloads/Romantiezer - CV.pdf";
 import { useContext, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { LanguageContext } from "../context/LanguageProvider";
 import { AboutMeSquare } from "./About/AboutMeSquare";
+import { CVButton } from "./CVButton";
 
 export default function About() {
   const { t } = useTranslation();
@@ -69,8 +68,9 @@ export default function About() {
             {t("description")}
           </p>
           <div className="mt-5">
-            {socialMedia.map((item) => (
+            {socialMedia.map((item, index) => (
               <IconButton
+                key={index}
                 link={item.link}
                 title={item.title}
                 svg={item.icon}
@@ -79,6 +79,8 @@ export default function About() {
           </div>
 
           <AboutMeSquare />
+
+          <CVButton />
         </div>
 
         <div className="pb-10 md:py-10 md:block">
@@ -88,15 +90,6 @@ export default function About() {
             className="my-auto hidden text-white md:flex md:h-[350px] xl:h-[500px] transition-all duration-150 hover:scale-105 animate-pulse"
           />
           <br />
-          <button
-            className="mx-auto md:mt-5 bg-[#32475b] dark:bg-[#4f6378] p-3 text-white rounded-xl shadow-lg flex items-center transition-all duration-100
-            hover:shadow-gray-500 dark:hover:shadow-white hover:scale-105 hover:bg-[#4f6378] dark:hover:bg-[#6c8097]"
-          >
-            <IconVC fill="white" />
-            <a className="font-bold" href={CV} download>
-              Download CV
-            </a>
-          </button>
         </div>
       </div>
     </section>

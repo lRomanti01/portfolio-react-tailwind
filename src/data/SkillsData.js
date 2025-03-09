@@ -1,19 +1,38 @@
-import Html from "../assets/images/html.png";
-import Css from "../assets/images/css.png";
-import Js from "../assets/images/js.png";
-import ReactIcon from "../assets/images/react.png";
-import Tailwind from "../assets/images/tailwind.png";
-import Firebase from "../assets/images/firebase.png";
-import Git from "../assets/images/git.png";
-import Java from "../assets/images/java.png";
-import Mysql from "../assets/images/mysql.png";
-import NodeJs from "../assets/images/nodejs.png"
-import ExpressJs from "../assets/images/expressjs.png"
-import Sequalize from "../assets/images/sequalize.png"
-import Typescript from "../assets/images/typescript.png"
-import Vue from "../assets/images/vue.png"
-import Redux from "../assets/images/redux.png"
-import NextJs from "../assets/images/nextjs.png";
+// import Js from "../assets/images/js.png";
+// import ReactIcon from "../assets/images/react.png";
+// import Tailwind from "../assets/images/tailwind.png";
+// import Firebase from "../assets/images/firebase.png";
+// import Git from "../assets/images/git.png";
+// import Java from "../assets/images/java.png";
+// import Mysql from "../assets/images/mysql.png";
+// import NodeJs from "../assets/images/nodejs.png"
+// import ExpressJs from "../assets/images/expressjs.png"
+// import Sequalize from "../assets/images/sequalize.png"
+// import Typescript from "../assets/images/typescript.png"
+// import Vue from "../assets/images/vue.png"
+// import Redux from "../assets/images/redux.png"
+// import NextJs from "../assets/images/nextjs.png";
+
+import {
+  Html,
+  Css,
+  Js,
+  ReactIcon,
+  Tailwind,
+  Firebase,
+  Git,
+  Java,
+  Mysql,
+  NodeJs,
+  ExpressJs,
+  Sequalize,
+  Typescript,
+  Vue,
+  Redux,
+  NextJs,
+  MongoDb,
+  nextWhite,
+} from "./TechImageIndex";
 
 const skillsData = [
   {
@@ -109,9 +128,21 @@ const skillsData = [
   {
     title: "NEXTJS",
     alt: "NEXTJS",
-    image: NextJs,
+    image: nextWhite,
     borderColor: "#fff",
   },
+  {
+    title: "MONGODB",
+    alt: "MONGODB",
+    image: MongoDb,
+    borderColor: "#13AA52",
+  },
+  // {
+  //   title: "MONGODB",
+  //   alt: "MONGODB",
+  //   image: MongoDb,
+  //   borderColor: "#13AA52",
+  // },
 ];
 
 export default skillsData;

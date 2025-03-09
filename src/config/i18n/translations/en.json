@@ -3,5 +3,11 @@
   "fullstack": "Full-Stack Developer",
   "description": "Development of web sites and applications",
   "aboutMeTitle": "About me",
-  "aboutMeDescription": "I am passionate about web programming and problem solving. My passion has allowed me to be self-taught and adapt to any situation."
+  "aboutMeDescription": "I am passionate about web programming and problem solving. My passion has allowed me to be self-taught and adapt to any situation.",
+  "portfolio":"Portfolio",
+  "about": "About",
+  "skills": "Skills",
+  "projects": "Projects",
+  "downloadCV": "Download CV",
+  "skillSet": "Skills set"
 }

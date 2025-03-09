@@ -42,7 +42,7 @@ const ProjectTemplate = ({ image, projectName, buttons, techIcons }) => {
           {techIcons.map((item, index) => (
             <img
               key={index}
-              className="ml-2 w-12 h-full"
+              className="ml-2  h-full"
               src={item.image}
               alt={item.alt}
             />
