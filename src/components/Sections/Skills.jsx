@@ -1,5 +1,5 @@
-import SkillsSetIcons from "./SkillsSetIcons";
-import skillsData from "../data/SkillsData";
+import SkillsSetIcons from "../SkillsSetIcons";
+import skillsData from "../../data/SkillsData";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -27,7 +27,7 @@ const Skills = () => {
               trigger: box,
               start: "top 90%", // Inicia cuando el box está en el 80% de la pantalla
               end: "top 60%", // Termina cuando está más cerca del centro
-              scrub: true,
+              // scrub: true,
               // markers: true, // Activa para ver los puntos de inicio/fin
             },
           }

@@ -1,4 +1,4 @@
-import ProjectTemplate from "./ProjectTemplate";
+import ProjectTemplate from "../projects/ProjectTemplate";
 import { projectsArray } from "../../data/ProjectsData";
 import { useTranslation } from "react-i18next";
 

@@ -1,14 +1,14 @@
-import Imagen from "../assets/images/devices.webp";
-import IconButton from "./IconButton";
-import IconGithub from "./icons/IconGithub";
-import IconEmail from "./icons/IconEmail";
-import IconLinkedin from "./icons/IconLinkedin";
-import IconInstagram from "./icons/IconInstagram";
+import Imagen from "../../assets/images/devices.webp";
+import IconButton from "../IconButton";
+import IconGithub from "../icons/IconGithub";
+import IconEmail from "../icons/IconEmail";
+import IconLinkedin from "../icons/IconLinkedin";
+import IconInstagram from "../icons/IconInstagram";
 import { useContext, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { LanguageContext } from "../context/LanguageProvider";
-import { AboutMeSquare } from "./About/AboutMeSquare";
-import { CVButton } from "./CVButton";
+import { LanguageContext } from "../../context/LanguageProvider";
+import { AboutMeSquare } from "../About/AboutMeSquare";
+import { CVButton } from "../CVButton";
 
 export default function About() {
   const { t } = useTranslation();
@@ -41,37 +41,6 @@ export default function About() {
       title: "Instagram",
       icon: (
         <IconInstagram className="fill-[#32475b] dark:fill-[#6c8097] rounded-full transition-all duration-100 hover:scale-110" />
-      ),
-    },
-  ];
-
-  const socialMediaButtons = [
-    {
-      link: "https://github.com/lRomanti01",
-      title: "github",
-      icon: (
-        <IconGithub className="mb-3 fill-[#32475b] dark:fill-[#6c8097] rounded-full transition-all duration-100 hover:scale-110" />
-      ),
-    },
-    {
-      link: "mailto:romanti159@gmail.com?Subject=Message%20from%20portfolio",
-      title: "Email",
-      icon: (
-        <IconEmail className="mb-3 fill-[#32475b] dark:fill-[#6c8097] rounded-full transition-all duration-100 hover:scale-110" />
-      ),
-    },
-    {
-      link: "https://www.linkedin.com/in/romantiezer-rodriguez/",
-      title: "Linked In",
-      icon: (
-        <IconLinkedin className="mb-3 fill-[#32475b] dark:fill-[#6c8097] rounded-full transition-all duration-100 hover:scale-110" />
-      ),
-    },
-    {
-      link: "https://www.instagram.com/romantiezerz/",
-      title: "Instagram",
-      icon: (
-        <IconInstagram className="mb-3 fill-[#32475b] dark:fill-[#6c8097] rounded-full transition-all duration-100 hover:scale-110" />
       ),
     },
   ];

@@ -1,23 +1,21 @@
-import { useRef } from "react";
-import Header from "../components/Header";
-import About from "./About";
-import Projects from "./projects/Projects";
-import Skills from "./Skills";
+import About from "./Sections/About";
+import { Experiences } from "./Sections/Experiences";
+import Projects from "./Sections/Projects";
+import Skills from "./Sections/Skills";
+import SpeedDial from "./SpeedDial";
 
-const Main = ({ footerRef }) => {
-  const mainRef = useRef(null);
-
+const Main = () => {
   return (
-    <div>
-      <Header mainRef={mainRef} footerRef={footerRef} />
-      <main ref={mainRef} className="transition-all duration-500">
-        <About />
-        <div className="bg-[#32475b] w-2/3 h-2 mx-auto my-12"></div>
-        <Skills />
-        <div className="bg-[#32475b] w-2/3 h-2 mx-auto my-12"></div>
-        <Projects />
-      </main>
-    </div>
+    <main>
+      <About />
+      <div className="bg-[#32475b] w-2/3 h-2 mx-auto my-12"></div>
+      <Experiences />
+      <div className="bg-[#32475b] w-2/3 h-2 mx-auto my-12"></div>
+      <Skills />
+      <div className="bg-[#32475b] w-2/3 h-2 mx-auto my-12"></div>
+      <Projects />
+      <SpeedDial />
+    </main>
   );
 };
 

@@ -24,7 +24,7 @@ const SkillsSetIcons = ({ title, image, alt, borderColor }) => {
   };
 
   return (
-    <div className="box mb-10 w-28 h-24 sm:mb-0 sm:w-40 md:w-60 xl:p-5 xl:w-70 2xl:w-80">
+    <div className="box mb-10 w-28 h-24 sm:mb-0 sm:w-40 md:w-60 xl:p-5 xl:w-70 2xl:w-80 cursor-pointer">
       <div className="flex flex-col-reverse justify-center items-center sm:flex-row" onMouseOver={handleOver} onMouseOut={handleOut}>
       <div
         ref={skillTitle}
