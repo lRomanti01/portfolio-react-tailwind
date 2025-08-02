@@ -30,14 +30,14 @@ const App = () => {
 
   return (
     <div
-      className={`bg-white min-h-screen dark:bg-black transition-all duration-300 bg-[url('./assets/images/bluelight.webp')] bg-no-repeat bg-[length:600px_600px] bg-[left_-16em_bottom_-15rem] bg-fixed bg-blend-luminosity`}
+      className={`bg-gray-100 min-h-screen dark:bg-black transition-all duration-300 bg-blend-luminosity`}
     >
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 
       <div className={`${isMenuOpen ? "blur-sm pointer-events-none" : ""}`}>
         <Main isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 
-        <footer className="w-full dark:border-gray-700 mt-10 py-4 px-6 text-sm text-center md:text-right text-gray-500 dark:text-gray-400">
+        <footer className="w-full dark:border-gray-700 mt-10 py-4 px-6 text-sm text-center text-gray-500 dark:text-gray-400">
           <p>
             &copy; {currentYear} Romantiezer Rodríguez Pérez. All rights
             reserved.

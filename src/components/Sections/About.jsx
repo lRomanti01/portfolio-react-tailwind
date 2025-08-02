@@ -48,10 +48,10 @@ export default function About() {
   return (
     <section
       id="about"
-      className="flex md:min-h-screen scroll-mt-16 justify-center"
+      className="flex scroll-mt-16 justify-center"
     >
     <div className="flex flex-col md:flex-row">
-        <div className="px-20 pt-20 md:mr-0 xl:mr-10 2xl:mr-32">
+        <div className="px-10 md:px-20 pt-10 md:pt-20 md:mr-0 xl:mr-10 2xl:mr-32">
           <h1 className="text-black dark:text-white transition-all duration-500 mb-3 text-4xl font-medium lg:text-5xl xl:text-6xl">
             Romantiezer <br />
             <span className="text-[#6c8097]">Rodríguez</span> <br />
