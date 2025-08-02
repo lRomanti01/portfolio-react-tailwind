@@ -6,13 +6,13 @@ import SpeedDial from "./SpeedDial";
 
 const Main = () => {
   return (
-    <main>
+    <main className="flex flex-col items-center">
       <About />
       <div className="bg-[#32475b] w-2/3 h-2 mx-auto my-12"></div>
       <Experiences />
       <div className="bg-[#32475b] w-2/3 h-2 mx-auto my-12"></div>
       <Skills />
-      <div className="bg-[#32475b] w-2/3 h-2 mx-auto my-12"></div>
+      <div className="bg-[#32475b] w-2/3 h-2 mx-auto my-12 mt-14"></div>
       <Projects />
       <SpeedDial />
     </main>

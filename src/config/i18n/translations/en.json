@@ -4,10 +4,23 @@
   "description": "Development of web sites and applications",
   "aboutMeTitle": "About me",
   "aboutMeDescription": "I am passionate about web programming and problem solving. My passion has allowed me to be self-taught and adapt to any situation.",
-  "portfolio":"Portfolio",
+  "portfolio": "Portfolio",
   "about": "About",
   "skills": "Skills",
+  "experiences": "Experiences",
   "projects": "Projects",
   "downloadCV": "Download CV",
-  "skillSet": "Skills set"
+  "skillSet": "Skills set",
+
+  "experience_0_title": "Fullstack Developer - Blue Technology Solution",
+  "experience_0_date": "Since Oct. 2023",
+  "experience_0_description": "I am currently working as a Fullstack Developer at Blue Technology Solution, where I am responsible for developing and maintaining web and mobile applications.",
+
+  "experience_1_title": "Freelance Developer",
+  "experience_1_date": "Since 2022",
+  "experience_1_description": "Worked as a freelance developer, delivering tailored web solutions for small businesses and individual clients. Focused on front-end development, performance optimization, and responsive design.",
+
+  "experience_2_title": "Waiting for life to bring more...",
+  "experience_2_date": "The future will tell",
+  "experience_2_description": ""
 }

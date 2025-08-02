@@ -37,8 +37,11 @@ const App = () => {
       <div className={`${isMenuOpen ? "blur-sm pointer-events-none" : ""}`}>
         <Main isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 
-        <footer className="text-gray-500 transition-all duration-500 dark:text-white mt-5 p-3 flex justify-end">
-          <p>Copyright &copy; {currentYear} Romantiezer Rodríguez Pérez </p>
+        <footer className="w-full dark:border-gray-700 mt-10 py-4 px-6 text-sm text-center md:text-right text-gray-500 dark:text-gray-400">
+          <p>
+            &copy; {currentYear} Romantiezer Rodríguez Pérez. All rights
+            reserved.
+          </p>
         </footer>
       </div>
     </div>

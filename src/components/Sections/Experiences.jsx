@@ -6,23 +6,21 @@ export const Experiences = () => {
 
   const experiences = [
     {
-      title: "Fullstack Developer - Blue Technology Solution",
-      date: "Since Oct. 2022",
-      description:
-        "I am currently working as a Fullstack Developer at Blue Technology Solution, where I am responsible for developing and maintaining web and mobile applications.",
+      title: t("experience_0_title"),
+      date: t("experience_0_date"),
+      description: t("experience_0_description"),
       latest: true,
     },
     {
-      title: "Flowbite Figma v1.3.0",
-      date: "Released on December 7th, 2021",
-      description:
-        "All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.",
+      title: t("experience_1_title"),
+      date: t("experience_1_date"),
+      description: t("experience_1_description"),
       latest: false,
     },
     {
-      title: "Esperando que la vida me traiga más cosas...",
-      date: "El futuro dirá",
-      description: "",
+      title: t("experience_2_title"),
+      date: t("experience_2_date"),
+      description: t("experience_2_description"),
       latest: false,
       skeleton: true,
     },
@@ -31,12 +29,12 @@ export const Experiences = () => {
   return (
     <section
       id="experiences"
-      className="px-10 scroll-mt-32 text-black dark:text-white flex flex-col items-center mt-5 mb-5"
+      className="px-10 scroll-mt-32 text-black dark:text-white flex flex-col items-center mt-5 mb-5 max-w-5xl"
     >
       <h1 className="uppercase font-bold text-2xl md:text-4xl mb-10">
-        {t("Experiences")}
+        {t("experiences")}
       </h1>
-      <ol className="relative border-s border-gray-200 dark:border-gray-700">
+      <ol className="relative border-s border-gray-200 dark:border-gray-700 ">
         {experiences.map((exp, index) => (
           <li key={index} className="mb-10 ms-6">
             <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">

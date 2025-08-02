@@ -136,13 +136,7 @@ const skillsData = [
     alt: "MONGODB",
     image: MongoDb,
     borderColor: "#13AA52",
-  },
-  // {
-  //   title: "MONGODB",
-  //   alt: "MONGODB",
-  //   image: MongoDb,
-  //   borderColor: "#13AA52",
-  // },
+  }
 ];
 
 export default skillsData;

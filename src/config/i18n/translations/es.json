@@ -7,7 +7,22 @@
   "portfolio": "Portafolio",
   "about": "Sobre mi",
   "skills": "Habilidades",
+  "experiences": "Experiencias",
   "projects": "Proyectos",
   "downloadCV": "Descargar CV",
-  "skillSet": "Habilidades"
+  "skillSet": "Habilidades",
+
+
+  
+  "experience_0_title": "Desarrollador Fullstack - Blue Technology Solution",
+  "experience_0_date": "Desde oct. 2023",
+  "experience_0_description": "Actualmente trabajo como desarrollador Fullstack en Blue Technology Solution, donde soy responsable del desarrollo y mantenimiento de aplicaciones web y móviles.",
+
+  "experience_1_title": "Desarrollador Freelance",
+  "experience_1_date": "Desde 2022",
+  "experience_1_description": "Trabajé como desarrollador freelance, creando soluciones web personalizadas para pequeñas empresas y clientes individuales. Me enfoqué en desarrollo front-end, optimización del rendimiento y diseño responsivo.",
+
+  "experience_2_title": "Esperando que la vida me traiga más cosas...",
+  "experience_2_date": "El futuro dirá",
+  "experience_2_description": ""
 }

@@ -9,6 +9,8 @@ import {
   nextWhite,
   Redux,
   Firebase,
+  Vue,
+  Quasar,
 } from "./TechImageIndex";
 
 import {
@@ -18,6 +20,8 @@ import {
   jcc,
   milly,
   todoFirebase,
+  happyTailsFriends,
+  vitaBalance
 } from "./ProjectsImageIndex";
 
 import { TbWorld } from "react-icons/tb";
@@ -190,6 +194,50 @@ const projectsArray = [
       },
       {
         link: "https://soluciones-milly.netlify.app/",
+        icon: (
+          <TbWorld className="fill-[#6c8097] w-9 h-9 shadow-md rounded-full transition-all duration-100 hover:scale-110" />
+        ),
+      },
+    ],
+  },
+  {
+    image: happyTailsFriends,
+    projectName: "Happy Tails Friends",
+    techIcons: [
+      {
+        image: Vue,
+        alt: "VueIcon",
+      },
+      {
+        image: Quasar,
+        alt: "Quasar",
+      },
+    ],
+    buttons: [
+      {
+        link: "https://www.happytailsfriends.com/",
+        icon: (
+          <TbWorld className="fill-[#6c8097] w-9 h-9 shadow-md rounded-full transition-all duration-100 hover:scale-110" />
+        ),
+      },
+    ],
+  },
+  {
+    image: vitaBalance,
+    projectName: "Vita Balance",
+    techIcons: [
+      {
+        image: Vue,
+        alt: "VueIcon",
+      },
+      {
+        image: Quasar,
+        alt: "Quasar",
+      },
+    ],
+    buttons: [
+      {
+        link: "https://www.myvitabalance.com/",
         icon: (
           <TbWorld className="fill-[#6c8097] w-9 h-9 shadow-md rounded-full transition-all duration-100 hover:scale-110" />
         ),

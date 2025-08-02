@@ -1,48 +1,66 @@
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const SkillsSetIcons = ({ title, image, alt, borderColor }) => {
-  
-  const skillTitle = useRef(null);
-  const skillIcon = useRef(null);
-
-  const handleOver = () => {
-    skillIcon.current.classList.remove("rotate-0");
-    skillIcon.current.classList.add("rotate-12");
-    skillTitle.current.classList.remove("animate-typingOut");
-    skillTitle.current.classList.add("animate-typing");
-    skillTitle.current.classList.remove("w-[0ch]");
-    skillTitle.current.classList.add("w-[12ch]");
-  };
-
-  const handleOut = () => {
-    skillIcon.current.classList.remove("rotate-12");
-    skillIcon.current.classList.add("rotate-0");
-    skillTitle.current.classList.remove("sanimate-typing");
-    skillTitle.current.classList.add("animate-typingOut");
-    skillTitle.current.classList.remove("w-[12ch]");
-    skillTitle.current.classList.add("w-[0ch]");
-  };
-
   return (
-    <div className="box mb-10 w-28 h-24 sm:mb-0 sm:w-40 md:w-60 xl:p-5 xl:w-70 2xl:w-80 cursor-pointer">
-      <div className="flex flex-col-reverse justify-center items-center sm:flex-row" onMouseOver={handleOver} onMouseOut={handleOut}>
-      <div
-        ref={skillTitle}
-        style={{ borderColor: `${borderColor}` }}
-        className={`animate-typingOut w-[0ch] whitespace-nowrap overflow-hidden mt-3 sm:mt-auto my-auto text-center mr-0 transition-all sm:flex sm:text-xs md:text-[17px] 2xl:text-2xl font-bold font-["Helvetica"] border-b-4`}
+    <motion.div
+      className="relative w-24 sm:w-28 md:w-32 xl:w-36 2xl:w-40 cursor-pointer flex flex-col items-center"
+      initial="rest"
+      whileHover="hover"
+      animate="rest"
+      variants={{
+        rest: {},
+        hover: {},
+      }}
+    >
+      {/* Imagen con rebote */}
+      <motion.img
+        src={image}
+        alt={alt}
+        className="h-12 md:h-14 xl:h-16 2xl:h-18 mx-auto"
+        variants={{
+          rest: {
+            y: 0,
+            transition: { type: "spring", stiffness: 200, damping: 20 },
+          },
+          hover: {
+            y: -6,
+            transition: { type: "spring", stiffness: 200, damping: 10 },
+          },
+        }}
+      />
+
+      {/* Título */}
+      <motion.div
+        className="text-sm md:text-base 2xl:text-lg font-semibold mt-2 text-center"
+        variants={{
+          rest: { opacity: 0, y: 8, transition: { duration: 0.25 } },
+          hover: { opacity: 1, y: 0, transition: { duration: 0.25 } },
+        }}
       >
         {title}
-      </div>
-      <div className="mx-auto">
-        <img
-          src={image}
-          alt={alt}
-          ref={skillIcon}
-          className="h-20 xl:h-24 2xl:h-28 transition-all duration-50000 mx-auto p-1"
-        />
-      </div>
-      </div>
-    </div>
+      </motion.div>
+
+      {/* Underline con fade in/out */}
+      <motion.div
+        className="w-full h-[3px] mt-1 rounded-full"
+        variants={{
+          rest: {
+            scaleX: 0,
+            opacity: 0,
+            transition: { duration: 0.4, ease: "easeOut" },
+          },
+          hover: {
+            scaleX: 1,
+            opacity: 1,
+            transition: { duration: 0.3, ease: "easeIn" },
+          },
+        }}
+        style={{
+          backgroundColor: borderColor,
+          transformOrigin: "left center",
+        }}
+      />
+    </motion.div>
   );
 };
 

@@ -11,8 +11,8 @@ i18n.use(initReactI18next).init({
     en: { translation: enTranslation },
     es: { translation: esTranslation },
   },
-  lng: "es", // Idioma por defecto
-  fallbackLng: "es", // Idioma de respaldo
+  lng: "en", // Idioma por defecto
+  fallbackLng: "en", // Idioma de respaldo
   interpolation: {
     escapeValue: false, // React ya se encarga de escapar por seguridad
   },
