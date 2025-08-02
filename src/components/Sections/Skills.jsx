@@ -40,12 +40,12 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="scroll-mt-32 text-black dark:text-white flex flex-col items-center mt-5 mb-5  max-w-5xl"
+      className="scroll-mt-32 text-black dark:text-white flex flex-col items-center max-w-5xl"
     >
       <h1 className="uppercase font-bold text-2xl md:text-4xl mb-10">
        {t("skillSet")}
       </h1>
-      <div ref={main} className="grid grid-cols-4 xl:grid-cols-5 gap-5 ">
+      <div ref={main} className="grid grid-cols-4 xl:grid-cols-5 gap-2 md:gap-5 ">
         {skillsData.map((item, index) => (
           <SkillsSetIcons key={index} {...item} />
         ))}

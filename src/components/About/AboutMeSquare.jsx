@@ -17,7 +17,7 @@ export const AboutMeSquare = () => {
     <div
       onMouseOver={handleOver}
       onMouseOut={handleOut}
-      className="border-black border-2 text-black dark:text-white duration-500 relative dark:border-white mt-10 p-10 rounded-xl cursor-pointer hover:scale-105 transition-all md:w-[350px] lg:w-[450px] xl:h-48 xl:w-[500px]"
+      className="border-black border-2 text-black dark:text-white duration-500 relative dark:border-white mt-10 p-5 md:p-8 rounded-xl cursor-pointer hover:scale-105 transition-all md:w-[350px] lg:w-[450px] xl:h-48 xl:w-[500px]"
     >
       <h1 className="font-bold text-2xl uppercase mb-2">{t("aboutMeTitle")}</h1>
       <span

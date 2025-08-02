@@ -22,7 +22,11 @@ const ProjectTemplate = ({ image, projectName, buttons, techIcons }) => {
       onMouseOver={handleOver}
       onMouseOut={handleOut}
     >
-      <img src={image} alt={projectName} className="rounded-2xl h-[310px] w-full" />
+      <img
+        src={image}
+        alt={projectName}
+        className="rounded-2xl w-full h-72 object-cover"
+      />
       <div
         ref={projectBack}
         className="bg-black absolute h-full w-full opacity-0 rounded-2xl transition-all flex flex-col justify-between items-center"
